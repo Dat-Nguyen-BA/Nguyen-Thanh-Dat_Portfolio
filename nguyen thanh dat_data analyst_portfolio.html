@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)file:///D:/Nguyen-Thanh-Dat_Portfolio/a.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nguyen Thanh Dat | Data Analyst Portfolio</title>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    :root {
+      --bg: #121212;
+      --text: #E5E7EB;
+      --navy: #121212;
+      --blue: #00D1FF;
+      --blue-dark: #00B8E6;
+      --muted: #A1A1AA;
+      --card: #1A1A1A;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --food-green: #26A69A;
+      --food-dark: #9A7BFF;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    /* ===== HERO OVERRIDE: paste this at the END of <style> ===== */
+header {
+  position: relative !important;
+  min-height: 100vh !important;
+  padding: 0 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  color: #fff !important;
+  text-align: left !important;
+}
+
+header::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: url("background1.jpg") center center / cover no-repeat !important;
+  z-index: 0 !important;
+}
+
+header::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18, 0.78),
+    rgba(26, 26, 26, 0.78)
+  ) !important;
+  z-index: 1 !important;
+}
+
+header .profile-wrap.hero-layout {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 6fr 4fr !important;
+  align-items: center !important;
+  gap: 32px !important;
+}
+
+header .hero-left {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+header .hero-right {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+header h1 {
+  font-size: 76px !important;
+  line-height: 1.05 !important;
+  margin: 0 0 18px 0 !important;
+  color: #ffffff !important;
+}
+
+header h2 {
+  font-size: 34px !important;
+  font-weight: 500 !important;
+  margin: 0 0 24px 0 !important;
+  color: #E4E4E7 !important;
+}
+
+header p {
+  max-width: 760px !important;
+  margin: 0 0 30px 0 !important;
+  font-size: 20px !important;
+  line-height: 1.7 !important;
+  color: #E5E7EB !important;
+}
+
+header .hero-buttons {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 18px !important;
+  align-items: center !important;
+}
+
+header .profile-img {
+  width: 400px !important;
+  height: 400px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border-radius: 50% !important;
+  border: 4px solid #00D1FF !important;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35) !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 992px) {
+  header {
+    min-height: auto !important;
+    padding: 72px 24px !important;
+  }
+
+  header .profile-wrap.hero-layout {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  header .hero-left {
+    order: 2 !important;
+    text-align: center !important;
+  }
+
+  header .hero-right {
+    order: 1 !important;
+  }
+
+  header h1 {
+    font-size: 46px !important;
+  }
+
+  header h2 {
+    font-size: 26px !important;
+  }
+
+  header p {
+    margin: 0 auto 28px auto !important;
+    font-size: 18px !important;
+  }
+
+  header .hero-buttons {
+    justify-content: center !important;
+  }
+
+  header .profile-img {
+    width: 240px !important;
+    height: 240px !important;
+  }
+}
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto 25px;
+      font-size: 16px;
+      color: #E4E4E7;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--blue);
+      color: #121212;
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin: 8px;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(0, 209, 255, 0.35);
+      color: #E5E7EB;
+    }
+
+    .btn-outline:hover {
+      background: rgba(0, 209, 255, 0.08);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--text);
+      border-left: 5px solid var(--blue);
+      padding-left: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.22);
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: rgba(0, 209, 255, 0.14);
+      color: #00D1FF;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .project-title, .job-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #00D1FF;
+      margin-bottom: 8px;
+    }
+
+    .sub-info {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: rgba(0, 209, 255, 0.45);
+    }
+
+    .project-card.featured {
+      background: linear-gradient(135deg, rgba(38,166,154,0.10), rgba(124,77,255,0.10));
+    }
+
+    .project-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .project-logo {
+      width: 78px;
+      height: 78px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: #121212;
+      flex-shrink: 0;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(0, 209, 255, 0.14);
+      color: #00D1FF;
+    }
+
+    .pill.food {
+      background: rgba(38, 166, 154, 0.16);
+      color: #7EF0E3;
+    }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mini-note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .view-details {
+      background: var(--blue);
+      color: #121212;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .view-details:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.78);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 1000;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      width: min(1100px, 100%);
+      max-height: 92vh;
+      overflow-y: auto;
+      background: var(--card);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      position: relative;
+      animation: fadeUp 0.25s ease;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close {
+      position: sticky;
+      top: 16px;
+      float: right;
+      margin: 16px 16px 0 0;
+      z-index: 2;
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 999px;
+      background: #2A2A2A;
+      color: #F4F4F5;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      background: #343434;
+    }
+
+    .case-study-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 28px;
+      padding: 30px 30px 10px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(38,166,154,0.12), rgba(124,77,255,0.12));
+      border-radius: 24px 24px 0 0;
+    }
+
+    .hero-copy h2 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      color: #F4F4F5;
+    }
+
+    .hero-copy p {
+      color: #D4D4D8;
+      margin-bottom: 16px;
+    }
+
+    .hero-logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-logo {
+      max-width: 100%;
+      width: 340px;
+      border-radius: 28px;
+      background: #121212;
+      padding: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-content {
+      padding: 26px 30px 34px;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .detail-box {
+      background: #161616;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .detail-box h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .detail-box p, .detail-box li {
+      font-size: 15px;
+      color: #D4D4D8;
+    }
+
+    .detail-box ul {
+      padding-left: 18px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #1E1E1E, #161616);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 30px;
+      color: var(--food-dark);
+      margin-bottom: 8px;
+	text-align: center;
+    }
+
+    .stat-card span {
+      color: #C4C4CC;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .section-label {
+      font-size: 22px;
+      color: var(--text);
+      margin: 26px 0 14px;
+    }
+
+    .findings-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .finding-item {
+      border-left: 4px solid var(--food-green);
+      background: #161616;
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .finding-item h5 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #F4F4F5;
+    }
+
+    .finding-item p {
+      color: #D4D4D8;
+      font-size: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .gallery figure {
+      background: #1A1A1A;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22);
+    }
+
+    .gallery img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      background: #121212;
+    }
+
+    .gallery figcaption {
+      padding: 12px 14px;
+      font-size: 14px;
+      color: #D4D4D8;
+    }
+
+    .recommendations {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .recommendation {
+      background: linear-gradient(135deg, rgba(124,77,255,0.14), rgba(38,166,154,0.10));
+      border: 1px solid rgba(124,77,255,0.24);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+
+    .recommendation strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #C7B5FF;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #D4D4D8;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 50px;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .case-study-hero,
+      .detail-grid,
+      .stats-grid,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .project-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      header h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .modal-content,
+      .case-study-hero {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .hero-copy h2 {
+        font-size: 26px;
+      }
+    }
+  
+    .profile-wrap { display:flex; flex-direction:column; align-items:center; gap:16px; }
+    .profile-img { width:160px; height:160px; object-fit:cover; border-radius:50%; border:4px solid #00D1FF; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
+/* ===== BACKGROUND CHUNG CHO TOÀN BỘ PHẦN DƯỚI HEADER ===== */
+.main-content-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("background2.jpg") center/cover no-repeat;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.main-content-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.72);
+  z-index: 0;
+}
+
+.main-content-bg > * {
+  position: relative;
+  z-index: 1;
+}
+    </style>
+</head><body><header>
+  <div class="profile-wrap hero-layout">
+    <div class="hero-left">
+      <h1>Nguyen Thanh Dat</h1>
+      <h2>Data Analyst Portfolio</h2>
+      <p>
+        Data driven Data Analyst with hands on experience in SQL, Power BI, Python, and Excel.
+        Passionate about turning complex datasets into clear insights that support smarter business decisions.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn" href="mailto:datnguyen03.ba@gmail.com">Contact Me</a>
+        <a class="btn btn-outline" href="file:///D:/Nguyen-Thanh-Dat_Portfolio/Nguyen%20Thanh%20Dat_Data%20Analyst_Resume.pdf" target="_blank">Download CV</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img alt="Nguyen Thanh Dat" class="profile-img" src="./nguyen thanh dat_data analyst_portfolio_files/profile.jpg">
+    </div>
+  </div>
+</header>
+<div class="main-content-bg">
+  <div class="container">
+<section>
+<h3>About Me</h3>
+<div class="card">
+<p>
+          I am a Business Analytics student with a strong interest in data analysis, dashboard development,
+          and business problem solving. I enjoy working with data to uncover patterns, generate insights,
+          and support decision making through clear and practical reporting.
+        </p>
+</div>
+</section>
+<section>
+<h3>Skills</h3>
+<div class="card">
+<div class="skills">
+<span class="skill">SQL</span>
+<span class="skill">Power BI</span>
+<span class="skill">Python</span>
+<span class="skill">Excel</span>
+<span class="skill">DAX</span>
+<span class="skill">SmartPLS</span>
+<span class="skill">Business Analysis</span>
+<span class="skill">Dashboarding</span>
+<span class="skill">Data Visualization</span>
+</div>
+</div>
+</section>
+<section>
+<h3>Experience</h3>
+<div class="card">
+<div class="job-title">Business Analyst Intern • Team Leader</div>
+<div class="sub-info">Industry 4.0 Innovation Center (IIC 4.0) | Jul 2025 - Sep 2025</div>
+<ul>
+<li>Researched international KPI standards on electricity usage for monitoring and optimization.</li>
+<li>Recommended relevant data collection to identify classrooms exceeding electricity thresholds.</li>
+<li>Built a real time Power BI dashboard to visualize and monitor energy consumption.</li>
+<li>Collaborated on HVAC SOP development for the Sustainable Building Management System.</li>
+<li>Helped define inter department protocols for efficient issue handling during system malfunctions.</li>
+</ul>
+</div>
+</section>
+<section>
+<h3>Projects</h3>
+<div class="projects-grid">
+<div class="card">
+<div class="project-head">
+<div>
+<div class="project-title">Gaining More Customers and Competitiveness for a F&amp;B Start-Up</div>
+<div class="sub-info">FoodCity Capstone Project | Strategic Business Analytics | Feb 2026</div>
+</div>
+<img alt="FoodCity logo" class="project-logo" src="./nguyen thanh dat_data analyst_portfolio_files/foodcity.jpg">
+</div>
+<p>
+            End-to-end analytics project for a university based Vietnamese food and beverage start-up focused on
+            customer satisfaction, operational pressure during peak hours, and low profit margin despite strong traffic.
+          </p>
+<div class="pill-row">
+<span class="pill food">Data Analyst</span>
+<span class="pill food">SmartPLS</span>
+<span class="pill food">Python</span>
+<span class="pill food">Excel</span>
+<span class="pill food">Power BI</span>
+</div>
+<div class="project-footer">
+<span class="mini-note">Click to view objectives, findings, gallery, and business impact.</span>
+<button class="view-details" data-modal-target="foodcity-modal">View Case Study</button>
+</div>
+</div>
+<div class="card project-card">
+<div class="project-title">Data Bank SQL Challenge</div>
+<div class="sub-info">Business Data Management | Aug 2025</div>
+<ul>
+<li>Developed advanced SQL queries to solve analytical business questions.</li>
+<li>Used CTEs and Window Functions to improve query structure and efficiency.</li>
+<li>Enhanced data processing workflow through optimized query design.</li>
+</ul>
+<div class="project-footer">
+<span class="mini-note">Detailed case study can be added next.</span>
+</div>
+</div>
+<div class="card project-card">
+<div class="project-title">Human Resource Dashboard</div>
+<div class="sub-info">Data Visualization | Jun 2025</div>
+<ul>
+<li>Applied DAX functions for accurate calculations and KPI analysis.</li>
+<li>Built interactive dashboards showing employee distribution and workforce performance.</li>
+<li>Analyzed turnover trends by year, age group, and department.</li>
+</ul>
+<div class="project-footer">
+<span class="mini-note">Detailed case study can be added next.</span>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h3>Education</h3>
+<div class="card">
+<div class="project-title">Eastern International University (EIU)</div>
+<div class="sub-info">Bachelor of Business Administration - Business Analytics | Expected Mar 2026</div>
+<ul>
+<li>Honors Program</li>
+<li>Dean’s List Scholarship</li>
+<li>GPA: 3.65 / 4.0</li>
+<li>100% Singapore Field Trip 2025</li>
+</ul>
+</div>
+</section>
+<section>
+<h3>Contact</h3>
+<div class="card">
+<p><strong>Email:</strong> <a href="mailto:datnguyen03.ba@gmail.com">datnguyen03.ba@gmail.com</a></p>
+<p><strong>Phone:</strong> (+84) 866 010 744</p>
+<p><strong>Location:</strong> Ho Chi Minh City, Vietnam</p>
+<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-th%C3%A0nh-%C4%91%E1%BA%A1t-data-analyst/">LinkedIn Profile</a></p>
+<p><strong>GitHub:</strong> <a href="https://github.com/Dat-Nguyen-BA">GitHub Portfolio</a></p>
+</div>
+</section>
+  </div>
+</div>
+<div aria-hidden="true" class="modal-overlay" id="foodcity-modal">
+
+<div aria-labelledby="foodcity-title" aria-modal="true" class="modal" role="dialog">
+<button aria-label="Close" class="modal-close">×</button>
+<div class="case-study-hero">
+<div class="hero-copy">
+<div class="pill-row" style="margin-top:0; margin-bottom: 14px;">
+<span class="pill food">Casptone Project</span>
+<span class="pill food">University F&amp;B Start Up</span>
+</div>
+<h2 id="foodcity-title">Gaining More Customers and Competitiveness for a Food Start-Up</h2>
+<p>
+            FoodCity is a Vietnamese style food and beverage brand inside a university campus. The business offers
+            clean, hygienic, delicious, and affordable meals for students and staff, but customer traffic declines over time
+            after each new student cohort arrives. At the same time, transaction volume remains high while profit stays very thin.
+          </p>
+<div class="pill-row">
+<span class="pill food">Role: Data Analyst</span>
+<span class="pill food">Tools: SmartPLS, Python, Excel, Power BI</span>
+</div>
+</div>
+<div class="hero-logo-wrap">
+<img alt="FoodCity business partner logo" class="hero-logo" src="./nguyen thanh dat_data analyst_portfolio_files/foodcity.jpg">
+</div>
+</div>
+<div class="modal-content">
+<div class="detail-grid">
+
+<div class="detail-box">
+<h4>Business Context</h4>
+<p>
+              The vendor serves a price sensitive student market. FoodCity experiences strong peak traffic and temporary demand spikes,
+              but repeat traffic drops later. This created a clear need to improve both customer experience and economic sustainability.
+            </p>
+</div>
+
+<div class="detail-box">
+
+<h4>Project Objectives</h4>
+<ul>
+<li>Assess customer satisfaction and explore preferences and expectations among students for FoodCity by conducting and analyzing a customer survey.</li>
+<li>Optimize cost structure and profitability of the business by integrating and analyzing operational data.</li>
+</ul>
+</div>
+
+</div>
+<div class="stats-grid">
+<div class="stat-card">
+<strong>63.1%</strong>
+<span>Students are willing to spend 30K to 50K VND per meal</span>
+</div>
+<div class="stat-card">
+<strong>11:00 - 12:00</strong>
+<span>Most intense daily peak hour with the highest service pressure</span>
+</div>
+<div class="stat-card">
+<strong>~3%</strong>
+<span>Base profit margin at 30K per portion before the new pricing scenario</span>
+</div>
+</div>
+<h3 class="section-label">Key Findings</h3>
+<div class="findings-list">
+<div class="finding-item">
+<h5>1. Customer budget range supports a slightly higher price point</h5>
+<p>
+              Only 29.0% of students preferred meals at or below 30K VND, while 63.1% were comfortable with the 30K to 50K VND range.
+              This indicated room for a pricing adjustment without immediately moving outside the main affordability zone.
+            </p>
+</div>
+<div class="finding-item">
+<h5>2. Food quality is the strongest driver of satisfaction, but also the weakest rated factor</h5>
+<p>
+              Food quality had the largest relative impact on satisfaction at 0.404, but its mean score was 3.68, which was lower than service quality,
+              reliability, and price. This showed the most important factor was also the biggest improvement opportunity.
+            </p>
+</div>
+<div class="finding-item">
+<h5>3. Customers want more convenience and a better ordering flow</h5>
+<p>
+              Improvement expectations clearly pointed to pre ordering via Zalo OA with 121 responses, building level delivery with 95 responses,
+              and only 74 responses saying the current process was already satisfactory.
+            </p>
+</div>
+<div class="finding-item">
+<h5>4. Menu variety matters for repeat visits</h5>
+<p>
+              In open ended feedback, the most frequent theme was menu variety with 58 responses, followed by order and service process,
+              food quality and taste, then portion size and pricing. This suggested freshness in menu design was important for maintaining demand over time.
+            </p>
+</div>
+<div class="finding-item">
+<h5>5. Peak hour congestion hurts both customers and staff</h5>
+<p>
+              The transaction chart showed that 11:00 to 12:00 was the most stressful part of the day. A large number of customers arrived within a narrow time window,
+              creating waiting pressure, staff fatigue, and a weaker service experience.
+            </p>
+</div>
+<div class="finding-item">
+<h5>6. Thin margin limited reinvestment into product quality</h5>
+<p>
+              The original 30K per portion setup generated a very thin margin, which made it harder for the business to reinvest in food quality,
+              ingredients, and a more sustainable operating model.
+            </p>
+</div>
+</div>
+<h3 class="section-label">Project Evidence Gallery</h3>
+<div class="gallery">
+<figure>
+<img alt="Relative impact of factors on satisfaction" src="./nguyen thanh dat_data analyst_portfolio_files/standardized_coefficient.jpg">
+<figcaption>Food quality had the strongest relative impact on customer satisfaction at 0.404.</figcaption>
+</figure>
+<figure>
+<img alt="Mean score by factor" src="./nguyen thanh dat_data analyst_portfolio_files/mean_score.jpg">
+<figcaption>Despite its importance, food quality had the lowest mean score among the main drivers.</figcaption>
+</figure>
+<figure>
+<img alt="Improvement expectations" src="./nguyen thanh dat_data analyst_portfolio_files/kvct1.jpg">
+<figcaption>Students strongly preferred Zalo pre ordering, faster payment, and building level delivery.</figcaption>
+</figure>
+<figure>
+<img alt="Improvement themes frequency" src="./nguyen thanh dat_data analyst_portfolio_files/kvct2.jpg">
+<figcaption>Menu variety and a smoother ordering process were the most common qualitative expectations.</figcaption>
+</figure>
+<figure>
+<img alt="Average transactions during the day" src="./nguyen thanh dat_data analyst_portfolio_files/peak_hour.jpg">
+<figcaption>The business experienced the highest operational pressure between 11:00 and 12:00.</figcaption>
+</figure>
+<figure>
+<img alt="Scenario analysis pricing simulation" src="./nguyen thanh dat_data analyst_portfolio_files/scenario_analysis.jpg">
+<figcaption>Scenario analysis showed a strong margin improvement when price was adjusted and costs were controlled.</figcaption>
+</figure>
+</div>
+<h3 class="section-label">Strategic Recommendations</h3>
+<div class="recommendations">
+<div class="recommendation">
+<strong>1. Restart the Zalo OA and Zalo group ordering model</strong>
+<p>
+              Rebuild the process around pre ordering, quick ticket pickup through a scanner station, and delivery by building when orders are confirmed before 10:30.
+              This directly addresses peak hour congestion and improves convenience for students.
+            </p>
+</div>
+<div class="recommendation">
+<strong>2. Increase the price to 35K or 40K per portion based on scenario analysis</strong>
+<p>
+              The team recommended a price adjustment supported by affordability data and scenario modeling, rather than relying on traffic volume alone.
+            </p>
+</div>
+<div class="recommendation">
+<strong>3. Improve food quality, ingredient input, and menu rotation</strong>
+<p>
+              Since food quality had the strongest effect on satisfaction, investment in better ingredients and a more diverse rotating menu was essential
+              to make the brand feel fresher and encourage repeat purchase.
+            </p>
+</div>
+</div>
+<h3 class="section-label">Outcome</h3>
+<div class="detail-box">
+<p>
+            The company selected Scenario 1 (increase the price per meal by 5,000 VND and keep the same meal portion). After implementation, profit margin increased by 10 percentage points, customer usage increased,
+            and satisfaction with the service improved. This project demonstrates how combining customer insight, operational analysis, and scenario simulation
+            can guide practical decisions for a growing food business.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<p>© 2026 Nguyen Thanh Dat | Data Analyst Portfolio</p>
+</footer>
+<script>
+    const openButtons = document.querySelectorAll('[data-modal-target]');
+    const body = document.body;
+
+    openButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = document.getElementById(button.dataset.modalTarget);
+        if (!target) return;
+        target.classList.add('active');
+        target.setAttribute('aria-hidden', 'false');
+        body.classList.add('modal-open');
+      });
+    });
+
+    document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+      const closeBtn = overlay.querySelector('.modal-close');
+
+      const closeModal = () => {
+        overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
+        body.classList.remove('modal-open');
+      };
+
+      closeBtn.addEventListener('click', closeModal);
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          closeModal();
+        }
+      });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach((overlay) => {
+          overlay.classList.remove('active');
+          overlay.setAttribute('aria-hidden', 'true');
+          body.classList.remove('modal-open');
+        });
+      }
+    });
+  </script>
+
+</body></html>
