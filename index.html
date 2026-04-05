@@ -100,7 +100,11 @@ header h1 {
   font-size: 76px !important;
   line-height: 1.05 !important;
   margin: 0 0 18px 0 !important;
-  color: #ffffff !important;
+  color: #00D1FF !important;
+  text-shadow:
+    0 0 4px rgba(0, 209, 255, 0.8),
+    0 0 8px rgba(0, 209, 255, 0.6),
+    0 0 16px rgba(0, 209, 255, 0.4);
 }
 
 header h2 {
@@ -515,11 +519,11 @@ header .profile-img {
       font-size: 30px;
       color: var(--food-dark);
       margin-bottom: 8px;
-	text-align: center;
+      text-align: center;
     }
 
     .stat-card span {
-      color: #C4C4CC;x
+      color: #C4C4CC;
       font-size: 14px;
       font-weight: 700;
     }
@@ -689,7 +693,62 @@ header .profile-img {
   position: relative;
   z-index: 1;
 }
-    </style>
+.sql-showcase {
+  display: grid;
+  gap: 16px;
+}
+
+.sql-item {
+  border-left: 4px solid var(--food-green);
+  background: #161616;
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+
+.sql-item h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #F4F4F5;
+}
+
+.sql-query-label,
+.sql-result-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #00D1FF;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.sql-query {
+  margin: 0 0 12px 0;
+  padding: 14px 16px;
+  background: #0f1115;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  color: #D4D4D8;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.sql-result {
+  margin: 0;
+  padding: 14px 16px;
+  background: rgba(0, 209, 255, 0.06);
+  border: 1px solid rgba(0, 209, 255, 0.18);
+  border-radius: 12px;
+  color: #E5E7EB;
+  font-size: 14px;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
 <header>
   <div class="profile-wrap hero-layout">
     <div class="hero-left">
@@ -780,18 +839,35 @@ header .profile-img {
 <button class="view-details" data-modal-target="foodcity-modal">View Case Study</button>
 </div>
 </div>
+
 <div class="card project-card">
-<div class="project-title">Data Bank SQL Challenge</div>
-<div class="sub-info">Business Data Management | Aug 2025</div>
-<ul>
-<li>Developed advanced SQL queries to solve analytical business questions.</li>
-<li>Used CTEs and Window Functions to improve query structure and efficiency.</li>
-<li>Enhanced data processing workflow through optimized query design.</li>
-</ul>
-<div class="project-footer">
-<span class="mini-note">Detailed case study can be added next.</span>
+  <div class="project-head">
+    <div>
+      <div class="project-title">Data Bank SQL Challenge</div>
+      <div class="sub-info">Business Data Management | Aug 2025</div>
+    </div>
+    <img alt="Data Bank logo" class="project-logo" src="./bank.jpg"/>
+  </div>
+
+  <p>
+    SQL-driven business analysis project for a digital-only bank focused on customer nodes,
+    transaction behavior, monthly balance patterns, and alternative data allocation logic.
+  </p>
+
+  <div class="pill-row">
+    <span class="pill">Data Analyst</span>
+    <span class="pill">Basic SQL</span>
+    <span class="pill">CTEs</span>
+    <span class="pill">Window Functions</span>
+    <span class="pill">Business Data Management</span>
+  </div>
+
+  <div class="project-footer">
+    <span class="mini-note">Click to view objectives, findings, business logic, and SQL challenge outcomes.</span>
+    <button class="view-details" data-modal-target="databank-modal">View Case Study</button>
+  </div>
 </div>
-</div>
+
 <div class="card project-card">
 <div class="project-title">Human Resource Dashboard</div>
 <div class="sub-info">Data Visualization | Jun 2025</div>
@@ -810,7 +886,7 @@ header .profile-img {
 <h3>Education</h3>
 <div class="card">
 <div class="project-title">Eastern International University (EIU)</div>
-<div class="sub-info">Bachelor of Business Administration - Business Analytics | Expected Mar 2026</div>
+<div class="sub-info">Bachelor of Business Administration - Business Analytics | Mar 2026</div>
 <ul>
 <li>Honors Program</li>
 <li>Dean’s List Scholarship</li>
@@ -997,6 +1073,267 @@ header .profile-img {
 </div>
 </div>
 </div>
+
+<div aria-hidden="true" class="modal-overlay" id="databank-modal">
+  <div aria-labelledby="databank-title" aria-modal="true" class="modal" role="dialog">
+    <button aria-label="Close" class="modal-close">×</button>
+
+    <div class="case-study-hero">
+      <div class="hero-copy">
+        <div class="pill-row" style="margin-top:0; margin-bottom: 14px;">
+          <span class="pill">Featured SQL Project</span>
+          <span class="pill">Digital Banking Analytics</span>
+        </div>
+        <h2 id="databank-title">Data Bank SQL Challenge</h2>
+        <p>
+          Data Bank simulates a digital-only bank integrated with a secure distributed data storage platform.
+          This project used SQL to analyze customer behavior, transaction activity, regional node allocation,
+          and different data allocation hypotheses for business decision making.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Role: Data Analyst</span>
+          <span class="pill">SQL Queries: Basic, CTEs, Window Functions</span>
+        </div>
+      </div>
+
+      <div class="hero-logo-wrap">
+        <img alt="Data Bank logo" class="hero-logo" src="./bank.jpg"/>
+      </div>
+    </div>
+
+    <div class="modal-content">
+      <div class="detail-grid">
+        <div class="detail-box">
+          <h4>Project Objectives</h4>
+          <ul>
+            <li>Analyze the Data Bank case study by using SQL to answer key business questions.</li>
+            <li>Understand customer behavior, transaction patterns, and regional performance.</li>
+            <li>Generate actionable insights to support segmentation, operations, and data allocation decisions.</li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <h4>Business Context</h4>
+          <p>
+            Data Bank is modeled as a digital-only bank connected to a distributed data storage platform.
+            The business allocates storage limits based on the amount of money customers hold in their accounts.
+            The project explored three main tables: regions, customer_nodes, and customer_transactions.
+          </p>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>5</strong>
+          <span>Unique nodes in the Data Bank system</span>
+        </div>
+        <div class="stat-card">
+          <strong>24 Days</strong>
+          <span>Average customer reallocation period to a different node</span>
+        </div>
+        <div class="stat-card">
+          <strong>13.20%</strong>
+          <span>Customers who increased closing balance by more than 5%</span>
+        </div>
+      </div>
+
+      <h3 class="section-label">SQL Questions and Outputs</h3>
+<div class="sql-showcase">
+
+  <div class="sql-item">
+    <h5>Question 1. What is the number of nodes per region?</h5>
+    <span class="sql-query-label">SQL Query</span>
+    <pre class="sql-query"><code>SELECT
+    rg.region_name,
+    COUNT(DISTINCT nd.node_id) AS total_nodes
+FROM
+    data_bank.customer_nodes AS nd
+INNER JOIN
+    data_bank.regions AS rg ON rg.region_id = nd.region_id
+GROUP BY
+    rg.region_name
+ORDER BY
+    rg.region_name;</code></pre>
+    <span class="sql-result-label">Result</span>
+    <div class="sql-result">
+      Each region has exactly <strong>5 nodes</strong>: Africa 5, America 5, Asia 5, Australia 5, and Europe 5.
+    </div>
+  </div>
+
+  <div class="sql-item">
+    <h5>Question 2. How many days on average are customers reallocated to a different node?</h5>
+    <span class="sql-query-label">SQL Query</span>
+    <pre class="sql-query"><code>WITH active_days_in_nodes AS (
+    SELECT
+        nd.customer_id,
+        nd.node_id,
+        SUM(nd.end_date - nd.start_date) AS active_days_in_nodes
+    FROM
+        data_bank.customer_nodes AS nd
+    WHERE
+        end_date != '9999-12-31'
+    GROUP BY
+        nd.customer_id, nd.node_id
+)
+SELECT ROUND(AVG(adin.active_days_in_nodes)) AS active_days_in_nodes
+FROM active_days_in_nodes AS adin;</code></pre>
+    <span class="sql-result-label">Result</span>
+    <div class="sql-result">
+      Customers are reallocated to a different node every <strong>24 days on average</strong>.
+    </div>
+  </div>
+
+  <div class="sql-item">
+    <h5>Question 3. What is the unique count and total amount for each transaction type?</h5>
+    <span class="sql-query-label">SQL Query</span>
+    <pre class="sql-query"><code>SELECT
+    txn_type,
+    COUNT(customer_id) AS total_transactions,
+    SUM(txn_amount) AS total_amount
+FROM
+    data_bank.customer_transactions
+GROUP BY
+    txn_type
+ORDER BY
+    txn_type;</code></pre>
+    <span class="sql-result-label">Result</span>
+    <div class="sql-result">
+      <strong>Deposit</strong>: 2,671 transactions, total amount 1,359,168.<br>
+      <strong>Purchase</strong>: 1,617 transactions, total amount 806,537.<br>
+      <strong>Withdrawal</strong>: 1,580 transactions, total amount 793,003.
+    </div>
+  </div>
+
+  <div class="sql-item">
+    <h5>Question 4. What is the average total historical deposit counts and amounts for all customers?</h5>
+    <span class="sql-query-label">SQL Query</span>
+    <pre class="sql-query"><code>WITH avg_deposit_amount AS (
+    SELECT
+        customer_id,
+        COUNT(customer_id) AS total_deposit_times,
+        AVG(txn_amount) AS total_deposit_amount
+    FROM
+        data_bank.customer_transactions
+    WHERE
+        txn_type = 'deposit'
+    GROUP BY customer_id
+)
+SELECT
+    ROUND(AVG(total_deposit_times)) AS average_deposit_times,
+    ROUND(AVG(total_deposit_amount)) AS average_deposit_amount
+FROM
+    avg_deposit_amount;</code></pre>
+    <span class="sql-result-label">Result</span>
+    <div class="sql-result">
+      On average, each customer has made <strong>5 deposits</strong>, with an average deposit amount of <strong>509</strong>.
+    </div>
+  </div>
+
+  <div class="sql-item">
+    <h5>Question 5. What is the percentage of customers who increase their closing balance by more than 5%?</h5>
+    <span class="sql-query-label">SQL Query</span>
+    <pre class="sql-query"><code>WITH monthly_closing_balance AS (
+    SELECT
+        customer_id,
+        EXTRACT(MONTH FROM txn_date) AS month,
+        SUM(CASE
+            WHEN txn_type = 'deposit' THEN txn_amount
+            WHEN txn_type IN ('withdrawal', 'purchase') THEN -txn_amount
+            ELSE 0
+        END) AS balance
+    FROM data_bank.customer_transactions
+    GROUP BY customer_id, month
+),
+balance_with_previous AS (
+    SELECT
+        customer_id,
+        month,
+        balance,
+        LAG(balance) OVER (PARTITION BY customer_id ORDER BY month) AS prev_balance
+    FROM monthly_closing_balance
+),
+increase_over_5_percent AS (
+    SELECT *
+    FROM balance_with_previous
+    WHERE prev_balance IS NOT NULL
+      AND balance > prev_balance
+      AND ((balance / prev_balance) > 1.05)
+),
+final_percentage AS (
+    SELECT
+        COUNT(DISTINCT customer_id) * 100.0 /
+        (SELECT COUNT(DISTINCT customer_id) FROM data_bank.customer_transactions) AS percent_increased
+    FROM increase_over_5_percent
+)
+SELECT ROUND(percent_increased, 2) || '%' AS increase_over_5_percent
+FROM final_percentage;</code></pre>
+    <span class="sql-result-label">Result</span>
+    <div class="sql-result">
+      Approximately <strong>13.20%</strong> of customers increased their closing balance by more than 5%.
+    </div>
+  </div>
+
+</div>
+      <h3 class="section-label">SQL Logic Highlights</h3>
+      <div class="detail-grid">
+        <div class="detail-box">
+          <h4>Core SQL Techniques</h4>
+          <ul>
+            <li>JOINs to connect customer_nodes with regions</li>
+            <li>CTEs for multi-step analytical logic</li>
+            <li>Window Functions for running balances and closing balances</li>
+            <li>PERCENTILE_CONT for regional reallocation distribution analysis</li>
+            <li>CASE WHEN logic to convert transactions into net balance movement</li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <h4>Business Questions Solved</h4>
+          <ul>
+            <li>Node distribution and customer allocation by region</li>
+            <li>Transaction type frequency and total amount</li>
+            <li>Average historical deposit count and amount</li>
+            <li>Monthly customer activity patterns</li>
+            <li>Closing balance growth and data allocation scenarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="section-label">Project Evidence</h3>
+      <div class="recommendations">
+        <div class="recommendation">
+          <strong>Customer Nodes Exploration</strong>
+          <p>
+            The project confirmed a structured node system with regional consistency, while also identifying differences in customer concentration by geography.
+          </p>
+        </div>
+
+        <div class="recommendation">
+          <strong>Customer Transactions</strong>
+          <p>
+            SQL analysis showed deposits as the most frequent and largest transaction group, with average deposit behavior staying relatively stable across customers.
+          </p>
+        </div>
+
+        <div class="recommendation">
+          <strong>Data Allocation Challenge</strong>
+          <p>
+            Running balance, end-of-month balance, and min average max balance logic were built to support three provisioning scenarios and estimate required data capacity more accurately.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="section-label">Outcome</h3>
+      <div class="detail-box">
+        <p>
+          This project demonstrated strong SQL problem solving across business analytics, transaction logic, and scenario modeling.
+          It translated structured SQL queries into clear operational insights for customer behavior, banking activity, and infrastructure allocation.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
 <p>© 2026 Nguyen Thanh Dat | Data Analyst Portfolio</p>
 </footer>
