@@ -6,6 +6,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Nguyen Thanh Dat | Data Analyst Portfolio</title>
 <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -40,157 +41,120 @@
       overflow: hidden;
     }
 
-    /* ===== HERO OVERRIDE: paste this at the END of <style> ===== */
-header {
-  position: relative !important;
-  min-height: 100vh !important;
-  padding: 0 56px !important;
-  display: flex !important;
-  align-items: center !important;
-  overflow: hidden !important;
-  color: #fff !important;
-  text-align: left !important;
-}
-
-header::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background: url("background1.jpg") center center / cover no-repeat !important;
-  z-index: 0 !important;
-}
-
-header::after {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background: linear-gradient(
-    135deg,
-    rgba(18, 18, 18, 0.78),
-    rgba(26, 26, 26, 0.78)
-  ) !important;
-  z-index: 1 !important;
-}
-
-header .profile-wrap.hero-layout {
-  position: relative !important;
-  z-index: 2 !important;
-  width: 100% !important;
-  max-width: 1280px !important;
-  margin: 0 auto !important;
-  display: grid !important;
-  grid-template-columns: 6fr 4fr !important;
-  align-items: center !important;
-  gap: 32px !important;
-}
-
-header .hero-left {
-  width: 100% !important;
-  text-align: left !important;
-}
-
-header .hero-right {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-header h1 {
-  font-size: 76px !important;
-  line-height: 1.05 !important;
-  margin: 0 0 18px 0 !important;
-  color: #00D1FF !important;
-  text-shadow:
-    0 0 4px rgba(0, 209, 255, 0.8),
-    0 0 8px rgba(0, 209, 255, 0.6),
-    0 0 16px rgba(0, 209, 255, 0.4);
-}
-
-header h2 {
-  font-size: 34px !important;
-  font-weight: 500 !important;
-  margin: 0 0 24px 0 !important;
-  color: #E4E4E7 !important;
-}
-
-header p {
-  max-width: 760px !important;
-  margin: 0 0 30px 0 !important;
-  font-size: 20px !important;
-  line-height: 1.7 !important;
-  color: #E5E7EB !important;
-}
-
-header .hero-buttons {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 18px !important;
-  align-items: center !important;
-}
-
-header .profile-img {
-  width: 400px !important;
-  height: 400px !important;
-  object-fit: cover !important;
-  object-position: center top !important;
-  border-radius: 50% !important;
-  border: 4px solid #00D1FF !important;
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35) !important;
-  display: block !important;
-  margin: 0 auto !important;
-}
-
-@media (max-width: 992px) {
-  header {
-    min-height: auto !important;
-    padding: 72px 24px !important;
-  }
-
-  header .profile-wrap.hero-layout {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-
-  header .hero-left {
-    order: 2 !important;
-    text-align: center !important;
-  }
-
-  header .hero-right {
-    order: 1 !important;
-  }
-
-  header h1 {
-    font-size: 46px !important;
-  }
-
-  header h2 {
-    font-size: 26px !important;
-  }
-
-  header p {
-    margin: 0 auto 28px auto !important;
-    font-size: 18px !important;
-  }
-
-  header .hero-buttons {
-    justify-content: center !important;
-  }
-
-  header .profile-img {
-    width: 240px !important;
-    height: 240px !important;
-  }
-}
-
-    header p {
-      max-width: 760px;
-      margin: 0 auto 25px;
-      font-size: 16px;
-      color: #E4E4E7;
+    /* ===== HERO SECTION ===== */
+    header {
+      position: relative !important;
+      min-height: 82vh !important;
+      padding: 56px 28px !important;
+      display: flex !important;
+      align-items: center !important;
+      overflow: hidden !important;
+      color: #fff !important;
+      text-align: left !important;
     }
 
+    header::before {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      background: url("background1.jpg") center center / cover no-repeat !important;
+      z-index: 0 !important;
+    }
+
+    header::after {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      background: linear-gradient(135deg, rgba(18, 18, 18, 0.78), rgba(26, 26, 26, 0.78)) !important;
+      z-index: 1 !important;
+    }
+
+    .profile-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    header .profile-wrap.hero-layout {
+      position: relative !important;
+      z-index: 2 !important;
+      width: 100% !important;
+      max-width: 1280px !important;
+      margin: 0 auto !important;
+      display: grid !important;
+      grid-template-columns: 6fr 4fr !important;
+      align-items: center !important;
+      gap: 24px !important;
+    }
+
+    header .hero-left {
+      width: 100% !important;
+      text-align: left !important;
+    }
+
+    header .hero-right {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    header h1 {
+      font-size: 58px !important;
+      line-height: 1.05 !important;
+      margin: 0 0 18px 0 !important;
+      color: var(--blue) !important;
+      text-shadow:
+        0 0 4px rgba(0, 209, 255, 0.8),
+        0 0 8px rgba(0, 209, 255, 0.6),
+        0 0 16px rgba(0, 209, 255, 0.4);
+    }
+
+    header h2 {
+      font-size: 26px !important;
+      font-weight: 500 !important;
+      margin: 0 0 24px 0 !important;
+      color: #E4E4E7 !important;
+    }
+
+    header p {
+      max-width: 620px !important;
+      margin: 0 0 30px 0 !important;
+      font-size: 17px !important;
+      line-height: 1.7 !important;
+      color: #E5E7EB !important;
+    }
+
+    header .hero-buttons {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 18px !important;
+      align-items: center !important;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--blue);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    header .profile-img {
+      width: 320px !important;
+      height: 320px !important;
+      object-fit: cover !important;
+      object-position: center top !important;
+      border-radius: 50% !important;
+      border: 4px solid var(--blue) !important;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35) !important;
+      display: block !important;
+      margin: 0 auto !important;
+    }
+
+    /* ===== BUTTONS ===== */
     .btn {
       display: inline-block;
       background: var(--blue);
@@ -222,19 +186,48 @@ header .profile-img {
       background: rgba(0, 209, 255, 0.08);
     }
 
+    /* ===== MAIN CONTENT ===== */
+    .main-content-bg {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .main-content-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("background2.jpg") center/cover no-repeat;
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    .main-content-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 18, 18, 0.72);
+      z-index: 0;
+    }
+
+    .main-content-bg > * {
+      position: relative;
+      z-index: 1;
+    }
+
     .container {
-      max-width: 1100px;
+      max-width: 1280px !important;
+      width: 100% !important;
       margin: auto;
-      padding: 40px 20px;
+      padding: 42px 28px !important;
     }
 
     section {
-      margin-bottom: 56px;
+      margin-bottom: 42px !important;
     }
 
     h3 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 32px;
+      margin-bottom: 18px !important;
       color: var(--text);
       border-left: 5px solid var(--blue);
       padding-left: 12px;
@@ -242,44 +235,110 @@ header .profile-img {
 
     .card {
       background: var(--card);
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.22);
-      margin-bottom: 20px;
+      padding: 32px;
+      border-radius: 22px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22);
+      margin-bottom: 14px !important;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill {
-      background: rgba(0, 209, 255, 0.14);
-      color: #00D1FF;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .project-title, .job-title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #00D1FF;
-      margin-bottom: 8px;
-    }
-
-    .sub-info {
-      color: var(--muted);
-      margin-bottom: 12px;
-      font-size: 14px;
+    .card p,
+    .card li {
+      font-size: 17px;
+      line-height: 1.75;
     }
 
     ul {
       padding-left: 20px;
     }
 
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== TOOLS AND SKILLS ===== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px !important;
+    }
+
+    .skill {
+      background: rgba(0, 209, 255, 0.14);
+      color: var(--blue);
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 0 !important;
+    }
+
+    .skill-level-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .skill-level-item {
+      background: #161616;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .skill-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .skill-top strong {
+      font-size: 18px;
+      color: #F4F4F5;
+    }
+
+    .skill-top span {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+      background: rgba(0, 209, 255, 0.12);
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 9px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .skill-bar div {
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue), var(--food-green));
+      border-radius: 999px;
+    }
+
+    .skill-level-item p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #D4D4D8;
+    }
+
+    .skills-no-bar .skill-bar {
+      display: none !important;
+    }
+
+    /* ===== PROJECTS ===== */
     .projects-grid {
       display: grid;
       gap: 20px;
@@ -288,7 +347,7 @@ header .profile-img {
     .project-card {
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
     }
 
@@ -299,7 +358,7 @@ header .profile-img {
     }
 
     .project-card.featured {
-      background: linear-gradient(135deg, rgba(38,166,154,0.10), rgba(124,77,255,0.10));
+      background: linear-gradient(135deg, rgba(38, 166, 154, 0.10), rgba(124, 77, 255, 0.10));
     }
 
     .project-head {
@@ -310,12 +369,26 @@ header .profile-img {
       margin-bottom: 14px;
     }
 
+    .project-title,
+    .job-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .sub-info {
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
     .project-logo {
-      width: 78px;
-      height: 78px;
+      width: 88px;
+      height: 88px;
       object-fit: cover;
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       background: #121212;
       flex-shrink: 0;
     }
@@ -328,12 +401,12 @@ header .profile-img {
     }
 
     .pill {
-      padding: 8px 12px;
+      padding: 11px 18px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 700;
       background: rgba(0, 209, 255, 0.14);
-      color: #00D1FF;
+      color: var(--blue);
     }
 
     .pill.food {
@@ -348,21 +421,22 @@ header .profile-img {
       gap: 12px;
       margin-top: 18px;
       padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .mini-note {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .view-details {
       background: var(--blue);
       color: #121212;
       border: none;
-      padding: 12px 16px;
+      padding: 14px 20px;
       border-radius: 10px;
       font-weight: 700;
+      font-size: 16px;
       cursor: pointer;
       transition: 0.25s ease;
     }
@@ -372,6 +446,7 @@ header .profile-img {
       transform: translateY(-1px);
     }
 
+    /* ===== MODALS ===== */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -435,7 +510,7 @@ header .profile-img {
       gap: 28px;
       padding: 30px 30px 10px;
       align-items: center;
-      background: linear-gradient(135deg, rgba(38,166,154,0.12), rgba(124,77,255,0.12));
+      background: linear-gradient(135deg, rgba(38, 166, 154, 0.12), rgba(124, 77, 255, 0.12));
       border-radius: 24px 24px 0 0;
     }
 
@@ -479,7 +554,7 @@ header .profile-img {
 
     .detail-box {
       background: #161616;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 18px;
     }
@@ -490,7 +565,8 @@ header .profile-img {
       color: var(--text);
     }
 
-    .detail-box p, .detail-box li {
+    .detail-box p,
+    .detail-box li {
       font-size: 15px;
       color: #D4D4D8;
     }
@@ -508,7 +584,7 @@ header .profile-img {
 
     .stat-card {
       background: linear-gradient(135deg, #1E1E1E, #161616);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
       padding: 18px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
@@ -534,21 +610,25 @@ header .profile-img {
       margin: 26px 0 14px;
     }
 
-    .findings-list {
+    .findings-list,
+    .recommendations,
+    .sql-showcase {
       display: grid;
       gap: 14px;
     }
 
-    .finding-item {
+    .finding-item,
+    .sql-item {
       border-left: 4px solid var(--food-green);
       background: #161616;
       border-radius: 14px;
       padding: 16px 18px;
     }
 
-    .finding-item h5 {
+    .finding-item h5,
+    .sql-item h5 {
       font-size: 16px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       color: #F4F4F5;
     }
 
@@ -566,7 +646,7 @@ header .profile-img {
 
     .gallery figure {
       background: #1A1A1A;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 18px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22);
@@ -585,15 +665,9 @@ header .profile-img {
       color: #D4D4D8;
     }
 
-    .recommendations {
-      display: grid;
-      gap: 14px;
-      margin-top: 12px;
-    }
-
     .recommendation {
-      background: linear-gradient(135deg, rgba(124,77,255,0.14), rgba(38,166,154,0.10));
-      border: 1px solid rgba(124,77,255,0.24);
+      background: linear-gradient(135deg, rgba(124, 77, 255, 0.14), rgba(38, 166, 154, 0.10));
+      border: 1px solid rgba(124, 77, 255, 0.24);
       border-radius: 16px;
       padding: 16px 18px;
     }
@@ -604,6 +678,43 @@ header .profile-img {
       color: #C7B5FF;
     }
 
+    .sql-query-label,
+    .sql-result-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--blue);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .sql-query {
+      margin: 0 0 12px 0;
+      padding: 14px 16px;
+      background: #0f1115;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      color: #D4D4D8;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+    .sql-result {
+      margin: 0;
+      padding: 14px 16px;
+      background: rgba(0, 209, 255, 0.06);
+      border: 1px solid rgba(0, 209, 255, 0.18);
+      border-radius: 12px;
+      color: #E5E7EB;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
     footer {
       background: var(--navy);
       color: #D4D4D8;
@@ -612,20 +723,56 @@ header .profile-img {
       margin-top: 50px;
     }
 
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 992px) {
+      header {
+        min-height: auto !important;
+        padding: 72px 24px !important;
+      }
 
-    a:hover {
-      text-decoration: underline;
+      header .profile-wrap.hero-layout {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+
+      header .hero-left {
+        order: 2 !important;
+        text-align: center !important;
+      }
+
+      header .hero-right {
+        order: 1 !important;
+      }
+
+      header h1 {
+        font-size: 46px !important;
+      }
+
+      header h2 {
+        font-size: 26px !important;
+      }
+
+      header p {
+        margin: 0 auto 28px auto !important;
+        font-size: 18px !important;
+      }
+
+      header .hero-buttons {
+        justify-content: center !important;
+      }
+
+      header .profile-img {
+        width: 240px !important;
+        height: 240px !important;
+      }
     }
 
     @media (max-width: 900px) {
       .case-study-hero,
       .detail-grid,
       .stats-grid,
-      .gallery {
+      .gallery,
+      .skill-level-grid {
         grid-template-columns: 1fr;
       }
 
@@ -636,16 +783,38 @@ header .profile-img {
     }
 
     @media (max-width: 768px) {
+      header {
+        min-height: auto !important;
+        padding: 64px 24px !important;
+      }
+
       header h1 {
-        font-size: 30px;
+        font-size: 42px !important;
       }
 
       header h2 {
-        font-size: 18px;
+        font-size: 24px !important;
+      }
+
+      header p {
+        font-size: 16px !important;
+      }
+
+      header .profile-img {
+        width: 240px !important;
+        height: 240px !important;
+      }
+
+      .container {
+        padding: 44px 20px;
       }
 
       h3 {
-        font-size: 24px;
+        font-size: 28px;
+      }
+
+      .card {
+        padding: 24px;
       }
 
       .project-footer {
@@ -663,88 +832,23 @@ header .profile-img {
         font-size: 26px;
       }
     }
-  
-    .profile-wrap { display:flex; flex-direction:column; align-items:center; gap:16px; }
-    .profile-img { width:160px; height:160px; object-fit:cover; border-radius:50%; border:4px solid #00D1FF; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
-/* ===== BACKGROUND CHUNG CHO TOÀN BỘ PHẦN DƯỚI HEADER ===== */
-.main-content-bg {
-  position: relative;
-  overflow: hidden;
+
+/* ===== CLEARER SECTION CARD BACKGROUND ===== */
+
+section > .card {
+  background: rgba(22, 30, 36, 0.92) !important;
+  border: 1px solid rgba(0, 209, 255, 0.18) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32) !important;
 }
 
-.main-content-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("background2.jpg") center/cover no-repeat;
-  opacity: 0.5;
-  z-index: 0;
+section > .card:hover {
+  border-color: rgba(0, 209, 255, 0.35) !important;
 }
 
-.main-content-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(18, 18, 18, 0.72);
-  z-index: 0;
-}
-
-.main-content-bg > * {
-  position: relative;
-  z-index: 1;
-}
-.sql-showcase {
-  display: grid;
-  gap: 16px;
-}
-
-.sql-item {
-  border-left: 4px solid var(--food-green);
-  background: #161616;
-  border-radius: 14px;
-  padding: 16px 18px;
-}
-
-.sql-item h5 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #F4F4F5;
-}
-
-.sql-query-label,
-.sql-result-label {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  color: #00D1FF;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.sql-query {
-  margin: 0 0 12px 0;
-  padding: 14px 16px;
-  background: #0f1115;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  color: #D4D4D8;
-  font-family: Consolas, Monaco, monospace;
-  font-size: 13px;
-  line-height: 1.6;
-  white-space: pre-wrap;
-  overflow-x: auto;
-}
-
-.sql-result {
-  margin: 0;
-  padding: 14px 16px;
-  background: rgba(0, 209, 255, 0.06);
-  border: 1px solid rgba(0, 209, 255, 0.18);
-  border-radius: 12px;
-  color: #E5E7EB;
-  font-size: 14px;
-  line-height: 1.6;
+/* Uppercase section titles */
+section h3 {
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
 }
 </style>
 </head>
@@ -783,19 +887,77 @@ header .profile-img {
 </div>
 </section>
 <section>
+<h3>Tools</h3>
+<div class="card">
+  <div class="skill-level-grid">
+
+    <div class="skill-level-item">
+      <div class="skill-top">
+        <strong>SQL</strong>
+        <span>Advanced</span>
+      </div>
+      <div class="skill-bar"><div style="width: 78%;"></div></div>
+      <p>Aggregations, Joins, CASE, CTEs, and Window Functions</p>
+    </div>
+
+    <div class="skill-level-item">
+      <div class="skill-top">
+        <strong>Power BI</strong>
+        <span>Advanced</span>
+      </div>
+      <div class="skill-bar"><div style="width: 85%;"></div></div>
+      <p>Power Query, Data Modeling, DAX, Data Visualization, and Bookmarks</p>
+    </div>
+
+    <div class="skill-level-item">
+      <div class="skill-top">
+        <strong>Excel</strong>
+        <span>Advanced</span>
+      </div>
+      <div class="skill-bar"><div style="width: 80%;"></div></div>
+      <p>Data Cleaning, Formulas, Pivot Tables, and Solver</p>
+    </div>
+
+    <div class="skill-level-item">
+      <div class="skill-top">
+        <strong>Python</strong>
+        <span>Intermediate</span>
+      </div>
+      <div class="skill-bar"><div style="width: 65%;"></div></div>
+      <p>Familiar libraries: pandas, NumPy, Matplotlib, Seaborn, and Scikit learn</p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section>
 <h3>Skills</h3>
 <div class="card">
-<div class="skills">
-<span class="skill">SQL</span>
-<span class="skill">Power BI</span>
-<span class="skill">Python</span>
-<span class="skill">Excel</span>
-<span class="skill">DAX</span>
-<span class="skill">SmartPLS</span>
-<span class="skill">Business Analysis</span>
-<span class="skill">Dashboarding</span>
-<span class="skill">Data Visualization</span>
-</div>
+  <div class="skill-level-grid">
+
+    <div class="skill-level-item">
+      <div class="skill-top">
+        <strong>Analytical Skills</strong>
+      </div>
+      <p>Business Analysis, Data Interpretation, and Critical Thinking.</p>
+    </div>
+
+    <div class="skill-level-item">
+      <div class="skill-top">
+        <strong>Data Processing Skills</strong>
+      </div>
+      <p>Exploratory Data Analysis, Data Cleaning, and Data Modeling.</p>
+    </div>
+
+    <div class="skill-level-item">
+      <div class="skill-top">
+        <strong>Data Reporting Skills</strong>
+      </div>
+      <p>Data Visualization, Business Presentation, and Recommendation Development.</p>
+    </div>
+
+  </div>
 </div>
 </section>
 <section>
