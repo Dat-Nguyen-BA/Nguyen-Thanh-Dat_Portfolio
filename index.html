@@ -889,21 +889,28 @@ section h3 {
 </div>
 </section>
 <section>
-</section>
-
-<section>
-<h3>Core Competencies</h3>
+<h3>Education</h3>
 <div class="card">
-  <div class="skills">
-    <span class="skill">Data Cleaning & Transformation</span>
-    <span class="skill">Exploratory Data Analysis</span>
-    <span class="skill">Dashboard Development</span>
-    <span class="skill">Business Reporting</span>
-    <span class="skill">KPI Monitoring</span>
-    <span class="skill">Statistical Analysis</span>
-  </div>
+<div class="project-title">Eastern International University (EIU)</div>
+<div class="sub-info">Bachelor of Business Administration - Business Analytics | Mar 2026</div>
+<ul>
+<li>Honors Program</li>
+<li>Dean’s List Scholarship</li>
+<li>GPA: 3.65 / 4.0</li>
+<li>Fully Funded Academic Field Trip – Singapore (2025)</li>
+</ul>
 </div>
 </section>
+<section>
+<h3>Awards</h3>
+<div class="card">
+<ul>
+<li><strong>EIU DATA CHALLENGE 2026:</strong> Runner-up</li>
+<li><strong>BBS CASE COMPETITION 2025:</strong> The Best Poster</li>
+</ul>
+</div>
+</section>
+
 
 <section>
 	
@@ -1064,19 +1071,45 @@ section h3 {
 </div>
 </div>
 </section>
+
 <section>
-<h3>Education</h3>
-<div class="card">
-<div class="project-title">Eastern International University (EIU)</div>
-<div class="sub-info">Bachelor of Business Administration - Business Analytics | Mar 2026</div>
-<ul>
-<li>Honors Program</li>
-<li>Dean’s List Scholarship</li>
-<li>GPA: 3.65 / 4.0</li>
-<li>Fully Funded Academic Field Trip – Singapore (2025)</li>
-</ul>
+<h3>Practice Projects</h3>
+<div class="projects-grid">
+
+  <div class="card project-card">
+    <div class="project-head">
+      <div>
+        <div class="project-title">Shipment Performance SQL Practice Case</div>
+        <div class="sub-info">SQL Practice | Logistics Operations Analytics | May 2026</div>
+      </div>
+    </div>
+
+    <p>
+      SQL practice case focused on logistics operations and shipment performance analysis.
+      The project covers on-time delivery rate, shipment volume, vehicle usage, customer volume,
+      route performance, driver ranking, abnormal trip detection, and rolling weekly delivery trends.
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">SQL Analytics</span>
+      <span class="pill">Logistics Analytics</span>
+      <span class="pill">CTEs</span>
+      <span class="pill">Window Functions</span>
+      <span class="pill">KPI Monitoring</span>
+      <span class="pill">Operations Analysis</span>
+    </div>
+
+    <div class="project-footer">
+      <span class="mini-note">
+        Click to view SQL questions, business logic, and query examples.
+      </span>
+      <button class="view-details" data-modal-target="logistics-modal">View SQL Queries</button>
+    </div>
+  </div>
+
 </div>
 </section>
+
 <section>
 <h3>Contact</h3>
 <div class="card">
@@ -1519,6 +1552,333 @@ FROM final_percentage;</code></pre>
 <footer>
 <p>© 2026 Nguyen Thanh Dat | Data Analyst Portfolio</p>
 </footer>
+<div aria-hidden="true" class="modal-overlay" id="logistics-modal">
+  <div aria-labelledby="logistics-title" aria-modal="true" class="modal" role="dialog">
+    <button aria-label="Close" class="modal-close">×</button>
+
+    <div class="case-study-hero">
+      <div class="hero-copy">
+        <div class="pill-row" style="margin-top:0; margin-bottom: 14px;">
+          <span class="pill">SQL Practice Project</span>
+          <span class="pill">Logistics Operations Analytics</span>
+        </div>
+
+        <h2 id="logistics-title">Shipment Performance SQL Practice Case</h2>
+
+        <p>
+          This practice project uses SQL to analyze shipment performance in a logistics operation.
+          The queries focus on business questions related to on-time delivery, shipment volume,
+          customer activity, route performance, driver performance, abnormal trip detection,
+          and weekly delivery trends.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">Role: Data Analyst</span>
+          <span class="pill">Tools: SQL</span>
+          <span class="pill">Focus: Operations KPI Monitoring</span>
+        </div>
+      </div>
+
+      <div class="hero-logo-wrap">
+        <div class="hero-logo" style="min-height: 220px; display:flex; align-items:center; justify-content:center; text-align:center;">
+          <img alt="Shipment logistics project image" class="hero-logo" src="./shipment.jpg"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-content">
+
+      <div class="detail-grid">
+        <div class="detail-box">
+          <h4>Business Context</h4>
+          <p>
+            The dataset represents logistics shipment operations. The analysis helps managers monitor delivery performance,
+            identify high volume customers and routes, evaluate driver performance, and detect abnormal trips that may require further investigation.
+          </p>
+        </div>
+
+        <div class="detail-box">
+          <h4>SQL Focus Areas</h4>
+          <ul>
+            <li>On-time delivery KPI calculation</li>
+            <li>Shipment volume analysis by vehicle, customer, month, and route</li>
+            <li>Driver ranking by shipment count, on-time rate, and average distance</li>
+            <li>Abnormal trip detection using time-to-distance ratio</li>
+            <li>Rolling weekly on-time trend monitoring</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>12</strong>
+          <span>SQL business questions practiced</span>
+        </div>
+        <div class="stat-card">
+          <strong>7</strong>
+          <span>Core logistics analysis areas</span>
+        </div>
+        <div class="stat-card">
+          <strong>SQL</strong>
+          <span>Aggregations, CTEs, CASE, and Window Functions</span>
+        </div>
+      </div>
+
+      <h3 class="section-label">Selected SQL Questions and Queries</h3>
+
+      <div class="sql-showcase">
+
+        <div class="sql-item">
+          <h5>Question 1. What is the overall on-time delivery rate across the logistics chain?</h5>
+          <span class="sql-query-label">SQL Query</span>
+          <pre class="sql-query"><code>SELECT 
+    (
+        CAST(
+            (SELECT COUNT(booking_id)
+             FROM logistics.shipments
+             WHERE ontime = 'Yes')
+        AS FLOAT)
+        /
+        (SELECT COUNT(booking_id)
+         FROM logistics.shipments)
+    ) * 100 AS ontime_rate;</code></pre>
+
+          <span class="sql-result-label">Business Purpose</span>
+          <div class="sql-result">
+            This query creates one daily KPI number for the Operations Director to monitor overall delivery reliability.
+          </div>
+        </div>
+
+        <div class="sql-item">
+          <h5>Question 2. Which vehicle type is used the most?</h5>
+          <span class="sql-query-label">SQL Query</span>
+          <pre class="sql-query"><code>SELECT
+    vehicle_type,
+    COUNT(booking_id) AS shipments
+FROM logistics.shipments
+GROUP BY vehicle_type
+ORDER BY shipments DESC;</code></pre>
+
+          <span class="sql-result-label">Business Purpose</span>
+          <div class="sql-result">
+            This query helps the Fleet Manager understand vehicle utilization and identify which vehicle types are most active.
+          </div>
+        </div>
+
+        <div class="sql-item">
+          <h5>Question 3. Who are the top 10 customers by shipment volume?</h5>
+          <span class="sql-query-label">SQL Query</span>
+          <pre class="sql-query"><code>SELECT 
+    customer_name,
+    COUNT(booking_id) AS volume
+FROM logistics.shipments
+GROUP BY customer_name
+ORDER BY volume DESC
+LIMIT 10;</code></pre>
+
+          <span class="sql-result-label">Business Purpose</span>
+          <div class="sql-result">
+            This query supports account management by helping the sales team prioritize high volume customers.
+          </div>
+        </div>
+
+        <div class="sql-item">
+          <h5>Question 4. What are the top routes by shipment volume and the weakest routes by on-time rate?</h5>
+          <span class="sql-query-label">SQL Query: Top 10 Routes by Volume</span>
+          <pre class="sql-query"><code>SELECT
+    origin_location,
+    destination_location,
+    COUNT(CASE WHEN ontime = 'Yes' THEN 1 END) AS ontime_shipments,
+    COUNT(booking_id) AS total_shipments,
+    ROUND(
+        (
+            COUNT(CASE WHEN ontime = 'Yes' THEN 1 END)::NUMERIC
+            / COUNT(booking_id)
+        ) * 100,
+        2
+    ) AS ontime_rate
+FROM logistics.shipments
+GROUP BY
+    origin_location,
+    destination_location
+ORDER BY total_shipments DESC
+LIMIT 10;</code></pre>
+
+          <span class="sql-query-label">SQL Query: Bottom 5 Routes by On-time Rate</span>
+          <pre class="sql-query"><code>SELECT
+    origin_location,
+    destination_location,
+    COUNT(CASE WHEN ontime = 'Yes' THEN 1 END) AS ontime_shipments,
+    COUNT(booking_id) AS total_shipments,
+    ROUND(
+        (
+            COUNT(CASE WHEN ontime = 'Yes' THEN 1 END)::NUMERIC
+            / COUNT(booking_id)
+        ) * 100,
+        2
+    ) AS ontime_rate
+FROM logistics.shipments
+GROUP BY
+    origin_location,
+    destination_location
+ORDER BY ontime_rate ASC
+LIMIT 5;</code></pre>
+
+          <span class="sql-result-label">Business Purpose</span>
+          <div class="sql-result">
+            These queries help operations managers identify high volume lanes and routes that need service improvement.
+          </div>
+        </div>
+
+        <div class="sql-item">
+          <h5>Question 5. How can drivers be ranked by shipment volume, on-time rate, and average distance?</h5>
+          <span class="sql-query-label">SQL Query</span>
+          <pre class="sql-query"><code>WITH driver_shipments_ontimerate_distance AS (
+    SELECT
+        driver_name,
+        COUNT(booking_id) AS total_shipments,
+        ROUND(
+            (
+                COUNT(CASE WHEN ontime = 'Yes' THEN 1 END)::numeric
+                / COUNT(booking_id)
+            ) * 100,
+            2
+        ) AS ontime_rate,
+        AVG(transportation_distance_km) AS avg_distance
+    FROM logistics.shipments
+    WHERE driver_name IS NOT NULL
+    GROUP BY driver_name
+)
+
+SELECT
+    driver_name,
+    total_shipments,
+    DENSE_RANK() OVER (ORDER BY total_shipments DESC) AS shipments_ranking
+FROM driver_shipments_ontimerate_distance;</code></pre>
+
+          <span class="sql-result-label">Business Purpose</span>
+          <div class="sql-result">
+            This query supports driver performance monitoring, reward decisions, and coaching discussions.
+          </div>
+        </div>
+
+        <div class="sql-item">
+          <h5>Question 6. Which trips have an unusually high time-to-distance ratio?</h5>
+          <span class="sql-query-label">SQL Query</span>
+          <pre class="sql-query"><code>WITH time_distance_ratio AS (
+    SELECT
+        booking_id,
+        EXTRACT(EPOCH FROM (trip_end_date - trip_start_date)) / 3600 AS total_hours,
+        transportation_distance_km,
+        ROUND(
+            (EXTRACT(EPOCH FROM (trip_end_date - trip_start_date)) / 3600)::numeric
+            / transportation_distance_km,
+            2
+        ) AS time_distance_ratio
+    FROM logistics.shipments
+    WHERE transportation_distance_km != 0
+      AND transportation_distance_km IS NOT NULL
+)
+
+SELECT
+    *,
+    CASE
+        WHEN time_distance_ratio > (
+            SELECT AVG(time_distance_ratio) * 2
+            FROM time_distance_ratio
+        )
+        THEN 'Flagged'
+        ELSE 'Normal'
+    END AS trip_status
+FROM time_distance_ratio;</code></pre>
+
+          <span class="sql-result-label">Business Purpose</span>
+          <div class="sql-result">
+            This query flags unusual trips that may be caused by traffic issues, operational delays, inefficient routing, or abnormal driver behavior.
+          </div>
+        </div>
+
+        <div class="sql-item">
+          <h5>Question 7. What is the weekly on-time rate and rolling 7-week on-time trend?</h5>
+          <span class="sql-query-label">SQL Query</span>
+          <pre class="sql-query"><code>WITH ONTIMERATE_BY_ISOWEEK AS (
+    SELECT
+        EXTRACT(ISOYEAR FROM ACTUAL_ETA) AS ISOYEAR,
+        EXTRACT(WEEK FROM ACTUAL_ETA) AS ISOWEEK,
+        COUNT(CASE WHEN ONTIME = 'Yes' THEN 1 END) AS ONTIME_SHIPMENTS,
+        COUNT(BOOKING_ID) AS TOTAL_SHIPMENTS,
+        ROUND(
+            (
+                COUNT(CASE WHEN ontime = 'Yes' THEN 1 END)::NUMERIC
+                / COUNT(BOOKING_ID)
+            ) * 100,
+            2
+        ) AS ONTIME_RATE
+    FROM LOGISTICS.SHIPMENTS
+    WHERE EXTRACT(ISOYEAR FROM ACTUAL_ETA) > 0
+    GROUP BY ISOYEAR, ISOWEEK
+)
+
+SELECT
+    ISOYEAR,
+    ISOWEEK,
+    ONTIME_RATE,
+    ROUND(
+        AVG(ONTIME_RATE) OVER (
+            ORDER BY ISOYEAR, ISOWEEK
+            ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+        ),
+        2
+    ) AS ROLLING_7WEEK_RATE
+FROM ONTIMERATE_BY_ISOWEEK
+ORDER BY ISOYEAR DESC, ISOWEEK DESC;</code></pre>
+
+          <span class="sql-result-label">Business Purpose</span>
+          <div class="sql-result">
+            This query smooths weekly delivery performance and helps managers observe longer term service reliability trends.
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="section-label">SQL Techniques Demonstrated</h3>
+
+      <div class="detail-grid">
+        <div class="detail-box">
+          <h4>Technical Skills</h4>
+          <ul>
+            <li>COUNT, AVG, ROUND, and GROUP BY for KPI calculation</li>
+            <li>CASE WHEN logic for conditional shipment counting</li>
+            <li>DATE_TRUNC and EXTRACT for time based analysis</li>
+            <li>CTEs for multi step business logic</li>
+            <li>DENSE_RANK and rolling average using Window Functions</li>
+          </ul>
+        </div>
+
+        <div class="detail-box">
+          <h4>Business Skills</h4>
+          <ul>
+            <li>Translate manager requests into SQL questions</li>
+            <li>Monitor logistics performance through KPIs</li>
+            <li>Identify operational bottlenecks by route and vehicle type</li>
+            <li>Support driver coaching and performance evaluation</li>
+            <li>Detect abnormal trips for further investigation</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="section-label">Outcome</h3>
+      <div class="detail-box">
+        <p>
+          This practice project demonstrates the ability to use SQL for logistics performance monitoring.
+          It shows how raw shipment records can be transformed into operational insights for managers in fleet,
+          sales, planning, driver operations, and logistics performance management.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
 <script>
     const openButtons = document.querySelectorAll('[data-modal-target]');
     const body = document.body;
